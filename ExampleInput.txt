@@ -1,0 +1,9 @@
+ABM13W-32.000MHz-8-T
+32.0000MHz
+8pF
+0.46pF
+41.19
+16.9mH
+1.46fF
+31MegaHz
+33MegaHz
