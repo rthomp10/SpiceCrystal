@@ -17,15 +17,19 @@ etc.
 
 ### Installing
 
-GCC
+GCC Compiler: just run *apt install g++* or **
 
 ## Running
 
 Linux/OSX
 1. Carefully modify the example inputs to your parameters.
 2. Open terminal
-3. Type *./main [drag and drop input file here]* OR just type in *./main* and input your parameters in the terminal.
-4. Your done! Check out the files it made and run the test one.
+3. ./configure
+4. Type *./main [drag and drop input file here]* OR just type in *./main* and input your parameters in the terminal.
+5. Your done! Check out the files it made and run the test one.
+
+Windows
+Install the [Windows Sub System for Linux](https://docs.microsoft.com/en-us/windows/wsl/install-win10) and follow the directions above.
 
 ## Authors
 
