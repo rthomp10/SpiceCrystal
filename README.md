@@ -30,7 +30,7 @@ git clone https://github.com/rthomp10/SpiceCrystal.git
 
 1. Carefully modify the example inputs to your parameters
 
-2. ./main <drag and drop input file here> OR ./main and input your parameters in the terminal
+2. ./main [drag and drop input file here] OR ./main and input your parameters in the terminal
 
 ## Authors
 
