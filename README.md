@@ -2,6 +2,8 @@
 
 A simple and (temporarily) crude solution to converting crystal parasitic elements into useful SPICE files.
 
+![Demo Video](trimmed.webm)
+
 ## Getting Started
 
 Determine the parasitic elements of a crystal. These are usually found in the data sheets like [this](https://abracon.com/datasheets/ABM13W.pdf) one for the ABM13W IoT crystal. 
