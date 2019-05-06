@@ -1,9 +1,0 @@
-* Auto generated net list for ABM13W-32.000MHz-8-T
-Rm Vout N002 41.19
-Cm N002 N001 1.46fF
-Co Vout Vin 0.46pF
-Lm Vin N001 16.9mH
-* Plating Load: 8pF
-* Frequency: 32.0000MHz
-.backanno
-.end

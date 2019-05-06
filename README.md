@@ -2,7 +2,7 @@
 
 A simple and (temporarily) crude solution to converting crystal parasitic elements into useful SPICE files.
 
-![Demo Video](trimmed.webm)
+![Demo Video](example.gif)
 
 ## Getting Started
 
