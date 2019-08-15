@@ -7,7 +7,7 @@
 ## Impedance Measurement Theory
 The crystal's impedance is assignable to the voltage across the crystal in the Impedance.asc file.  
 V=IR -> R = V/I  
-1A AC Current Source -> R = Vcrystal/1 = Vcrystal  
+1A AC Current Source -> R = Vcrystal/1A = Vcrystal  
 
 The points between series resonance (the dip towards a short across the crystal) and anti-resonance (the peak towards infinant impedance) is range (bandwidth of parallel resonance) where the crystal will operate in with a pierce oscillator. As you can tell by analyzing the phase, it's the area where it introduces the necessary phase shift to satisfy the Barkhausen criteria. The series resistor, inverter, and the loop capacitors in the testbench provide a propper demonstration.
 
