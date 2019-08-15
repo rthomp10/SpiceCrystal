@@ -5,6 +5,8 @@
 ![Demo Video](example.gif)
 
 ## Impedance Measurement Theory
+The test bench represents an ideal pierce oscillator circuit. An ideal positive feedback 3.3V CMOS inverting amplifier is included. It's modeled with a hyperbolic tangent function that can be manipulated to your desire. The large feedback resistor throws the inverter into the linear region. A kickstart pulse is included to create the necessary noise to excite the crystal. You have a noise floor in real life to do this for you, but it has to be created in LTSpice. This test bench can be used to guesstimate the appropriate series resistor to bring the drive level within specification, model ideal phase noise to compare your current design, guess the minimum transconductance necessary for an amplifier design, and more. It's a test bench, so go probe around and learn how these things work!
+
 The crystal's impedance is assignable to the voltage across the crystal in the Impedance.asc file.  
 V=IR -> R = V/I  
 1A AC Current Source -> R = Vcrystal/1A = Vcrystal  
