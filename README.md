@@ -1,16 +1,10 @@
 # SpiceCrystal
-
-A simple and (temporarily) crude solution to converting crystal parasitic elements into useful SPICE files for verification purposes.
-
-##Purpose
-This program makes it easy to quickly verify the performance of a crystal. 
- 
-1. Finds the impedance of the standalone crystal for drive bandwidth determination and amplifier transconductance requirements  
+1. Finds the impedance of the standalone crystal for drive, bandwidth, and transconductance calculations  
 2. Creates a Pierce Oscillator testbench ciruit for startup, ideal noise analysis, and drive level approximations
 
 ![Demo Video](example.gif)
 
-###Impedance Measurement Theory
+## Impedance Measurement Theory
 The crystal's impedance is assignable to the voltage across the crystal in the Impedance.asc file.  
 V=IR -> R = V/I  
 1A AC Current Source -> R = Vcrystal/1 = Vcrystal  
@@ -23,12 +17,11 @@ Determine the parasitic elements of a crystal. These are usually found in the da
 
 ## Prerequisites
 
-GCC Compiler: 
-Linux: *apt install g++*  
-OSX: Install [XCode](https://developer.apple.com/xcode/) for OSX  
-Windows: Refer to the instructions further down.
+1. GCC Compiler   
+   - OSX: Install [XCode](https://developer.apple.com/xcode/) for OSX  
+   - Windows: Refer to the instructions further down.
 
-[LTSpice](https://www.analog.com/en/design-center/design-tools-and-calculators/ltspice-simulator.html)
+2. [LTSpice](https://www.analog.com/en/design-center/design-tools-and-calculators/ltspice-simulator.html)
 
 
 ## Installing
@@ -36,17 +29,25 @@ Windows: Refer to the instructions further down.
 ### Windows
 
 For now, install the [Windows Sub System for Linux](https://docs.microsoft.com/en-us/windows/wsl/install-win10) and work in there.
-You can access all your files at 
 
+Once you install some version of Linux, install gcc on your linux distro by opening up Command Prompt and typing in
+```
+bash
+sudo apt-get update
+sudo apt-get install g++
+```
+
+You can access all your files at 
 ```
 C:\Users\<username>\AppData\Local\Packages\CanonicalGroupLimited.UbuntuonWindows_79rhkp1fndgsc\LocalState 
 ```
+Now you can follow the directions for OSX.
 
-### Linux/OSX
-
+### OSX
+Go to the directory you want to have the program at and clone it.
 ```
+cd <the directory you want your program to be>
 git clone https://github.com/rthomp10/SpiceCrystal.git
-./configure
 ```
 
 ## Running
