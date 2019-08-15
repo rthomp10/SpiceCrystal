@@ -5,5 +5,5 @@ ABM13W-32.000MHz-8-T
 41.19
 16.9mH
 1.46fF
-31MegaHz
-33MegaHz
+31.96MegaHz
+32.14MegaHz
