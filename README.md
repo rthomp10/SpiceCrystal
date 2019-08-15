@@ -1,6 +1,6 @@
 # SpiceCrystal
 1. Finds the impedance of the standalone crystal for drive, bandwidth, and transconductance calculations  
-2. Creates a Pierce Oscillator testbench ciruit for startup, ideal noise analysis, and drive level approximations
+2. Creates a Pierce Oscillator testbench ciruit for startup, ideal noise figure, and drive level approximations
 
 ![Demo Video](example.gif)
 
