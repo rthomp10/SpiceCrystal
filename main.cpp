@@ -246,7 +246,6 @@ int main (int argc, char** argv) {
 	myfile << "SYMATTR Value V=1.66-1.66*tanh(30*(V(xtal_in)-1.66)) \n";
 	myfile << "SYMATTR InstName B1                                  \n";
 	myfile << "TEXT 320 640 Left 2 !.tran 0 400u 1u                 \n";
-	myfile << "TEXT 600 640 Left 2 !.options plotwinsize=0          \n";
 	myfile << "TEXT 328 672 Left 2 !;tran 0 950u 949.88u 2n         \n";
 	myfile.close();                                                 
 	
