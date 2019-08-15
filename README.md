@@ -1,18 +1,34 @@
 # SpiceCrystal
 
-A simple and (temporarily) crude solution to converting crystal parasitic elements into useful SPICE files.
+A simple and (temporarily) crude solution to converting crystal parasitic elements into useful SPICE files for verification purposes.
+
+##Purpose
+This program makes it easy to quickly verify the performance of a crystal. 
+ 
+1. Finds the impedance of the standalone crystal for drive bandwidth determination and amplifier transconductance requirements  
+2. Creates a Pierce Oscillator testbench ciruit for startup, ideal noise analysis, and drive level approximations
 
 ![Demo Video](example.gif)
 
+###Impedance Measurement Theory
+The crystal's impedance is assignable to the voltage across the crystal in the Impedance.asc file.  
+V=IR -> R = V/I  
+1A AC Current Source -> R = Vcrystal/1 = Vcrystal  
+
+The points between series resonance (the dip towards a short across the crystal) and anti-resonance (the peak towards infinant impedance) is range (bandwidth of parallel resonance) where the crystal will operate in with a pierce oscillator. As you can tell by analyzing the phase, it's the area where it introduces the necessary phase shift to satisfy the Barkhausen criteria. The series resistor, inverter, and the loop capacitors in the testbench provide a propper demonstration.
+
 ## Getting Started
 
-Determine the parasitic elements of a crystal. These are usually found in the data sheets like [this](https://abracon.com/datasheets/ABM13W.pdf) one for the ABM13W IoT crystal. 
+Determine the parasitic elements of a crystal. These are usually found in the data sheets like [this one for Abracon's ABM13W](https://abracon.com/datasheets/ABM13W.pdf). 
 
 ## Prerequisites
 
-GCC Compiler: just run *apt install g++* on Ubuntu. Install [XCode](https://developer.apple.com/xcode/) for OSX.
+GCC Compiler: 
+Linux: *apt install g++*  
+OSX: Install [XCode](https://developer.apple.com/xcode/) for OSX  
+Windows: Refer to the instructions further down.
 
-Install a SPICE program: [LTSpice](https://www.analog.com/en/design-center/design-tools-and-calculators/ltspice-simulator.html), [MacSpice](https://www.macspice.com/Download.html), PSpice, etc.
+[LTSpice](https://www.analog.com/en/design-center/design-tools-and-calculators/ltspice-simulator.html)
 
 
 ## Installing
@@ -20,7 +36,7 @@ Install a SPICE program: [LTSpice](https://www.analog.com/en/design-center/desig
 ### Windows
 
 For now, install the [Windows Sub System for Linux](https://docs.microsoft.com/en-us/windows/wsl/install-win10) and work in there.
-Once installed, you can access all your files at 
+You can access all your files at 
 
 ```
 C:\Users\<username>\AppData\Local\Packages\CanonicalGroupLimited.UbuntuonWindows_79rhkp1fndgsc\LocalState 
@@ -35,9 +51,9 @@ git clone https://github.com/rthomp10/SpiceCrystal.git
 
 ## Running
 
-1. Carefully modify the example inputs to your parameters
-
-2. ./main [drag and drop input file here] OR ./main and input your parameters in the terminal
+1. ./configure
+2. ./main [drag and drop input file here] OR ./main and input your parameters  
+3. ./configure -c will clean all the output files that the program has made
 
 ## Authors
 
