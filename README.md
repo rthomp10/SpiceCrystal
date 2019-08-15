@@ -25,7 +25,11 @@ Determine the parasitic elements of a crystal. These are usually found in the da
 
 
 ## Installing
-
+### OSX
+```
+cd <the directory you want your program to be>
+git clone https://github.com/rthomp10/SpiceCrystal.git
+```
 ### Windows
 
 For now, install the [Windows Sub System for Linux](https://docs.microsoft.com/en-us/windows/wsl/install-win10) and work in there.
@@ -41,14 +45,7 @@ You can access all your files at
 ```
 C:\Users\<username>\AppData\Local\Packages\CanonicalGroupLimited.UbuntuonWindows_79rhkp1fndgsc\LocalState 
 ```
-Now you can follow the directions for OSX.
-
-### OSX
-Go to the directory you want to have the program at and clone it.
-```
-cd <the directory you want your program to be>
-git clone https://github.com/rthomp10/SpiceCrystal.git
-```
+Now follow the directions for OSX.
 
 ## Running
 
