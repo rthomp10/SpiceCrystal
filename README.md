@@ -32,8 +32,7 @@ git clone https://github.com/rthomp10/SpiceCrystal.git
 ```
 ### Windows
 
-For now, install the [Windows Sub System for Linux](https://docs.microsoft.com/en-us/windows/wsl/install-win10) and work in there.
-
+For now, install the [Windows Sub System for Linux](https://docs.microsoft.com/en-us/windows/wsl/install-win10) and work in there.  
 Once you install some version of Linux, install gcc on your linux distro by opening up Command Prompt and typing in
 ```
 bash
@@ -48,11 +47,21 @@ C:\Users\<username>\AppData\Local\Packages\CanonicalGroupLimited.UbuntuonWindows
 Now follow the directions for OSX.
 
 ## Running
-
-1. ./configure
-2. ./main [drag and drop input file here] OR ./main and input your parameters  
-3. ./configure -c will clean all the output files that the program has made
-
+```
+./configure
+./main
+```
+OR
+```
+./configure
+./main [.txt with input parameters] 
+```  
+The parameter .txt file has to be formatted exactly how the example files are.
+## Clean-up 
+Cleans up all the files that the program has made.
+```
+./configure -c 
+```
 ## Authors
 
 * **Ryan Thompson** - *Initial work* - [LinkedIn Page](https://www.linkedin.com/in/rthomp10/)
