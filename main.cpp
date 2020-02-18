@@ -5,17 +5,18 @@
 using namespace std;
 
 int main (int argc, char** argv) {
-	string name;//Crystal name
-	string CL; 	//plating load
-	string Co;	//Shunt Capacitance
-	string Rm;	//Motional Resistance
-	string Lm;  //Motional Inductance
-	string Cm;  //Motional Frequency
-	string freq;//Specified frequency
+	string name;		//Crystal name
+	string CL; 			//plating load
+	string Co;			//Shunt Capacitance
+	string Rm;			//Motional Resistance
+	string Lm;  		//Motional Inductance
+	string Cm;  		//Motional Frequency
+	string freq;		//Specified frequency
 	string sweep_start;	//sweep start frequency
 	string sweep_end;	//sweep end frequuency 
 	ofstream myfile;
 	string line;
+	int cap_value;	// Loop cap values
 	
 	//Text file or user input
 	if(argv[1])
@@ -56,6 +57,11 @@ int main (int argc, char** argv) {
 		cout << "Sweep start frequency = "; cin >> sweep_start;
 		cout << "Sweep end frequency = ";   cin >> sweep_end;
 	}
+
+	//
+	// Loop capacitor equation
+	//
+	cap_value = 2*stoi(CL);
 	
 	//Netlist Creation
 	myfile.open (name + ".net");
@@ -184,17 +190,18 @@ int main (int argc, char** argv) {
 	myfile << "WIRE 1200 240 1040 240                               \n";
 	myfile << "WIRE 256 304 256 240                                 \n";
 	myfile << "WIRE 368 304 256 304                                 \n";
-	myfile << "WIRE 656 304 448 304                                 \n";
+	myfile << "WIRE 960 304 448 304                                 \n";
 	myfile << "WIRE 256 432 256 304                                 \n";
 	myfile << "WIRE 320 432 256 432                                 \n";
 	myfile << "WIRE 352 432 320 432                                 \n";
 	myfile << "WIRE 528 432 480 432                                 \n";
 	myfile << "WIRE 576 432 528 432                                 \n";
-	myfile << "WIRE 656 432 656 304                                 \n";
 	myfile << "WIRE 656 432 576 432                                 \n";
 	myfile << "WIRE 816 432 656 432                                 \n";
+	myfile << "WIRE 960 432 960 304                               \n";
+	myfile << "WIRE 960 432 896 432                               \n";
 	myfile << "WIRE 1040 432 1040 240                               \n";
-	myfile << "WIRE 1040 432 896 432                                \n";
+	myfile << "WIRE 1040 432 960 432                                \n";
 	myfile << "WIRE 1040 448 1040 432                               \n";
 	myfile << "WIRE 320 464 320 432                                 \n";
 	myfile << "WIRE 528 464 528 432                                 \n";
@@ -217,12 +224,12 @@ int main (int argc, char** argv) {
 	myfile << "WINDOW 0 24 8 Left 1                                 \n";
 	myfile << "WINDOW 3 24 56 Left 1                                \n";
 	myfile << "SYMATTR InstName C1                                  \n";
-	myfile << "SYMATTR Value "+ CL +"                               \n";
+	myfile << "SYMATTR Value "+ to_string(cap_value) +"pF           \n";
 	myfile << "SYMBOL cap 512 464 R0                                \n";
 	myfile << "WINDOW 0 24 8 Left 1                                 \n";
 	myfile << "WINDOW 3 24 56 Left 1                                \n";
 	myfile << "SYMATTR InstName C2                                  \n";
-	myfile << "SYMATTR Value "+ CL +"                               \n";
+	myfile << "SYMATTR Value "+ to_string(cap_value) +"pF           \n";
 	myfile << "SYMBOL current 656 464 R0                            \n";
 	myfile << "WINDOW 0 30 60 Left 1                                \n";
 	myfile << "WINDOW 3 30 79 Left 1                                \n";
