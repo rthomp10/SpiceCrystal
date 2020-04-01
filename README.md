@@ -42,11 +42,10 @@ sudo apt-get update
 sudo apt-get install g++
 ```
 
-You can access all your files at 
+To access the program foler, run the explorer command. It will open your current directory in explorer.
 ```
-C:\Users\<username>\AppData\Local\Packages\CanonicalGroupLimited.UbuntuonWindows_79rhkp1fndgsc\LocalState 
+explorer . 
 ```
-Now follow the directions for OSX.
 
 ## Running
 ```
@@ -59,6 +58,7 @@ OR
 ./main [.txt with input parameters] 
 ```  
 The parameter .txt file has to be formatted exactly how the example files are.
+
 ## Clean-up 
 Cleans up all the files that the program has made.
 ```
